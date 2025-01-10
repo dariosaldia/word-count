@@ -23,5 +23,5 @@ pub struct Cli {
     
     /// The file
     #[arg(group = "input")]
-    pub file: String,
+    pub file: Option<String>,
 }
