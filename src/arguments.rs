@@ -7,6 +7,10 @@ pub struct Cli {
     #[arg(short = 'c', long, group = "opts")]
     pub character: bool,
 
+    /// The number of lines in each input file is written to the standard output.
+    #[arg(short = 'l', long, group = "opts")]
+    pub line: bool,
+    
     /// The file
     #[arg(group = "input")]
     pub file: String,
