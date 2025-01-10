@@ -20,5 +20,10 @@ fn main() {
     } else if cli.char {
         let char_count = read_file_to_string(&cli.file).chars().count();
         eprintln!("  {} {}", char_count, &cli.file);
+    } else {
+        let byte_count = read_file_to_string(&cli.file).as_bytes().len();
+        let line_count = read_file_to_string(&cli.file).lines().count();
+        let word_count = read_file_to_string(&cli.file).split_ascii_whitespace().count();
+        eprintln!("    {}   {}  {} {}", line_count, word_count, byte_count, &cli.file);
     }
 }
