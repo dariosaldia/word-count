@@ -14,5 +14,8 @@ fn main() {
     } else if cli.line {
         let line_count = read_file_to_string(&cli.file).lines().count();
         eprintln!("  {} {}", line_count, &cli.file);
+    } else if cli.word {
+        let word_count = read_file_to_string(&cli.file).split_ascii_whitespace().count();
+        eprintln!("  {} {}", word_count, &cli.file);
     }
 }

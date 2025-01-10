@@ -10,6 +10,10 @@ pub struct Cli {
     /// The number of lines in each input file is written to the standard output.
     #[arg(short = 'l', long, group = "opts")]
     pub line: bool,
+
+    /// The number of words in each input file is written to the standard output.
+    #[arg(short = 'w', long, group = "opts")]
+    pub word: bool,
     
     /// The file
     #[arg(group = "input")]
