@@ -5,7 +5,7 @@ use clap::Parser;
 pub struct Cli {
     /// The number of bytes in the file is written to the standard output.
     #[arg(short = 'c', long, group = "opts")]
-    pub character: bool,
+    pub byte: bool,
 
     /// The number of lines in each input file is written to the standard output.
     #[arg(short = 'l', long, group = "opts")]
